@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electricidad | Calculadora Técnica</title>
+
+    <link rel="stylesheet" href="../CSS/Electricidad.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="../JS/Electricidad.js?v=3"></script>
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+
+            <a href="index%20.html" class="btn-inicio">
+                ← Inicio
+            </a>
+
+            <div class="titulo">
+                <span class="icono">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#2563eb"/>
+                    </svg>
+                </span>
+
+                <div>
+                    <h1>Electricidad</h1>
+                    <p>Calculadora Técnica</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <!-- PANEL IZQUIERDO -->
+            <section class="panel-conversor">
+
+                <div class="encabezado-panel">
+                    <span class="numero">02</span>
+
+                    <div>
+                        <h2>Conversor de electricidad</h2>
+                        <p>Calcula corriente, voltaje, resistencia y potencia</p>
+                    </div>
+                </div>
+
+
+                <!-- MENÚ DE LAS 4 MAGNITUDES -->
+                <div class="menu-magnitudes">
+
+                    <button type="button" class="tab-magnitud activa" data-magnitud="I">
+                        <span class="tab-simbolo">I</span>
+                        <span>Corriente</span>
+                    </button>
+
+                    <button type="button" class="tab-magnitud" data-magnitud="V">
+                        <span class="tab-simbolo">V</span>
+                        <span>Voltaje</span>
+                    </button>
+
+                    <button type="button" class="tab-magnitud" data-magnitud="R">
+                        <span class="tab-simbolo">R</span>
+                        <span>Resistencia</span>
+                    </button>
+
+                    <button type="button" class="tab-magnitud" data-magnitud="P">
+                        <span class="tab-simbolo">P</span>
+                        <span>Potencia</span>
+                    </button>
+
+                </div>
+
+                <p class="ayuda-menu">Elige qué quieres hallar. Los otros campos se ajustan solos.</p>
+
+
+                <!-- DATO 1 -->
+                <div class="campo-dato">
+
+                    <div class="campo-dato-cabecera">
+                        <label id="dato1-etiqueta" for="dato1-valor">Voltaje</label>
+
+                        <select id="dato1" class="select-magnitud">
+                            <!-- se llena con JS -->
+                        </select>
+                    </div>
+
+                    <div class="campo-dato-entrada">
+                        <input type="number" id="dato1-valor" placeholder="Valor">
+                        <select id="dato1-unidad"></select>
+                    </div>
+
+                </div>
+
+
+                <!-- DATO 2 -->
+                <div class="campo-dato">
+
+                    <div class="campo-dato-cabecera">
+                        <label id="dato2-etiqueta" for="dato2-valor">Corriente</label>
+
+                        <select id="dato2" class="select-magnitud">
+                            <!-- se llena con JS -->
+                        </select>
+                    </div>
+
+                    <div class="campo-dato-entrada">
+                        <input type="number" id="dato2-valor" placeholder="Valor">
+                        <select id="dato2-unidad"></select>
+                    </div>
+
+                </div>
+
+
+                <!-- REGLA -->
+                <div class="regla-mini">
+
+                    <div>
+
+                        <strong>Leyes que se aplican</strong>
+
+                        <p>
+                            Ley de Ohm: V = I × R
+                            <span>•</span>
+                            Ley de Watt: P = V × I
+                        </p>
+
+                        <small>
+                            Si conoces R y P, se usa la ley combinada con raíz cuadrada.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTON -->
+                <button type="button" class="btn-calcular">
+
+                    <span>Calcular</span>
+
+                    <span class="flecha-boton">
+                        →
+                    </span>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- PANEL DERECHO -->
+            <section class="panel-procedimiento">
+
+                <div class="documento">
+                    <div class="math-output"></div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <section class="regla-completa">
+
+            <div class="regla-titulo">
+
+                <div>
+                    <h2>Ley de Ohm y Ley de Watt</h2>
+
+                    <p>
+                        Referencia rápida: qué es, símbolo, unidad e instrumento
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- TABLA VISUAL -->
+            <div class="tabla-visual">
+
+                <div class="fila-tabla encabezado-tabla">
+                    <span>Magnitud</span>
+                    <span>Símbolo</span>
+                    <span>Unidad</span>
+                    <span>Instrumento</span>
+                    <span class="col-concepto">Concepto</span>
+                </div>
+
+                <div class="fila-tabla">
+                    <span>Corriente</span>
+                    <span>I</span>
+                    <span>A</span>
+                    <span>Amperímetro</span>
+                    <span class="col-concepto">Flujo de electrones por unidad de tiempo.</span>
+                </div>
+
+                <div class="fila-tabla">
+                    <span>Voltaje</span>
+                    <span>V</span>
+                    <span>V</span>
+                    <span>Voltímetro</span>
+                    <span class="col-concepto">Fuerza que impulsa a los electrones al moverse.</span>
+                </div>
+
+                <div class="fila-tabla">
+                    <span>Resistencia</span>
+                    <span>R</span>
+                    <span>Ω</span>
+                    <span>Ohmímetro / multímetro</span>
+                    <span class="col-concepto">Oposición que presenta un material al paso de la corriente.</span>
+                </div>
+
+                <div class="fila-tabla">
+                    <span>Potencia</span>
+                    <span>P</span>
+                    <span>W</span>
+                    <span>Wattímetro</span>
+                    <span class="col-concepto">Rapidez con que se consume o transfiere energía eléctrica.</span>
+                </div>
+
+            </div>
+
+
+            <!-- FORMULAS -->
+            <div class="regla-frases">
+
+                <div class="frase subir">
+                    <span class="frase-icono">Ω</span>
+
+                    <div>
+                        <strong>LEY DE OHM</strong>
+                        <span>V = I × R</span>
+                    </div>
+                </div>
+
+                <div class="separador">+</div>
+
+                <div class="frase bajar">
+                    <span class="frase-icono">W</span>
+
+                    <div>
+                        <strong>LEY DE WATT</strong>
+                        <span>P = V × I</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="advertencia">
+                <p>
+                    <strong>Importante:</strong>
+                    si solo conoces la resistencia y la potencia, la corriente y el voltaje
+                    se hallan con raíz cuadrada: <strong>I = √(P/R)</strong> y <strong>V = √(P×R)</strong>.
+                </p>
+            </div>
+
+        </section>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Almacenamiento | Calculadora Técnica</title>
+
+    <link rel="stylesheet" href="../CSS/Almacenamiento.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="../JS/Almacenamiento.js"></script>
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+
+            <a href="index%20.html" class="btn-inicio">
+                ← Inicio
+            </a>
+
+            <div class="titulo">
+                <span class="icono">
+                    <img src="../ICONS/set_desk_882.png" alt="Icono de Almacenamiento">
+                </span>
+
+                <div>
+                    <h1>Almacenamiento</h1>
+                    <p>Calculadora Técnica</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <!-- PANEL IZQUIERDO -->
+            <section class="panel-conversor">
+
+                <div class="encabezado-panel">
+                    <span class="numero">01</span>
+
+                    <div>
+                        <h2>Conversor de almacenamiento</h2>
+                        <p>Convierte unidades y aprende el procedimiento</p>
+                    </div>
+                </div>
+
+
+                <!-- VALOR -->
+                <div class="campo">
+
+                    <label for="valor">
+                        Valor
+                    </label>
+
+                    <input
+                        type="number"
+                        id="valor"
+                        placeholder="Ingresa un valor"
+                    >
+
+                </div>
+
+
+                <!-- UNIDADES -->
+                <div class="unidades">
+
+                    <div class="campo">
+
+                        <label for="desde">
+                            Desde
+                        </label>
+
+                        <select id="desde">
+
+                            <option value="bit">bit</option>
+                            <option value="B">Byte (B)</option>
+                            <option value="KB">Kilobyte (KB)</option>
+                            <option value="MB">Megabyte (MB)</option>
+                            <option value="GB">Gigabyte (GB)</option>
+                            <option value="TB">Terabyte (TB)</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="flecha-conversion">
+                        →
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="hasta">
+                            Hasta
+                        </label>
+
+                        <select id="hasta">
+
+                            <option value="bit">bit</option>
+                            <option value="B">Byte (B)</option>
+                            <option value="KB">Kilobyte (KB)</option>
+                            <option value="MB">Megabyte (MB)</option>
+                            <option value="GB" selected>Gigabyte (GB)</option>
+                            <option value="TB">Terabyte (TB)</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REGLA -->
+                <div class="regla-mini">
+
+                    s
+
+                    <div>
+
+                        <strong>Regla de almacenamiento</strong>
+
+                        <p>
+                            Subes = ÷ 1024
+                            <span>•</span>
+                            Bajas = × 1024
+                        </p>
+
+                        <small>
+                            bit ↔ Byte = ×8 / ÷8
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTON -->
+                <button type="button" class="btn-calcular">
+
+                    <span>Calcular</span>
+
+                    <span class="flecha-boton">
+                        →
+                    </span>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- PANEL DERECHO -->
+            <section class="panel-procedimiento">
+
+                <div class="documento">
+                    <div class="math-output"></div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        
+        <section class="regla-completa">
+
+            <div class="regla-titulo  ">
+
+                
+
+                <div>
+                    <h2>Ley de almacenamiento</h2>
+
+                    <p>
+                        La regla fundamental para realizar conversiones
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="regla-frases">
+
+                <div class="frase subir">
+
+                    <span class="frase-icono">
+                        ↑
+                    </span>
+
+                    <div>
+                        <strong>SUBES</strong>
+                        <span>DIVIDES ÷ 1024</span>
+                    </div>
+
+                </div>
+
+
+                <div class="separador">
+                    VS
+                </div>
+
+
+                <div class="frase bajar">
+
+                    <span class="frase-icono">
+                        ↓
+                    </span>
+
+                    <div>
+                        <strong>BAJAS</strong>
+                        <span>MULTIPLICAS × 1024</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESCALA -->
+            <div class="escala">
+
+                <div class="unidad">
+                    <strong>bit</strong>
+                    <small>×8 / ÷8</small>
+                </div>
+
+                <div class="conector">
+                    →
+                </div>
+
+                <div class="unidad">
+                    <strong>B</strong>
+                    <small>Byte</small>
+                </div>
+
+                <div class="conector">
+                    →
+                </div>
+
+                <div class="unidad">
+                    <strong>KB</strong>
+                    <small>×1024</small>
+                </div>
+
+                <div class="conector">
+                    →
+                </div>
+
+                <div class="unidad">
+                    <strong>MB</strong>
+                    <small>×1024</small>
+                </div>
+
+                <div class="conector">
+                    →
+                </div>
+
+                <div class="unidad">
+                    <strong>GB</strong>
+                    <small>×1024</small>
+                </div>
+
+                <div class="conector">
+                    →
+                </div>
+
+                <div class="unidad">
+                    <strong>TB</strong>
+                    <small>×1024</small>
+                </div>
+
+            </div>
+
+
+            <div class="advertencia">
+
+                <span></span>
+
+                <p>
+                    <strong>Importante:</strong>
+                    entre Byte y bit siempre se utiliza
+                    <strong>8</strong>, nunca 1024.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</body>
+</html>

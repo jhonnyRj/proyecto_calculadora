@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frecuencia y Datos | Calculadora Técnica</title>
+
+    <link rel="stylesheet" href="../CSS/FrecuenciaDatos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="../JS/FrecuenciaDatos.js"></script>
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+
+            <a href="index%20.html" class="btn-inicio">
+                ← Inicio
+            </a>
+
+            <div class="titulo">
+                <span class="icono">
+                    <img src="../ICONS/hz.gif" alt="Icono de Frecuencia y Datos">
+                </span>
+
+                <div>
+                    <h1 id="tituloModulo">Frecuencia</h1>
+                    <p>Calculadora Técnica</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <!-- PANEL IZQUIERDO -->
+            <section class="panel-conversor">
+
+                <div class="encabezado-panel">
+                    <span class="numero">02</span>
+
+                    <div>
+                        <h2 id="tituloPanel">Conversor de frecuencia</h2>
+                        <p id="subtituloPanel">Convierte Hz y sus múltiplos (base 10)</p>
+                    </div>
+                </div>
+
+
+                <!-- SELECTOR DE MODO -->
+                <div class="modo-selector" role="tablist" aria-label="Tipo de conversión">
+
+                    <button
+                        type="button"
+                        class="modo-btn activo"
+                        data-modo="frecuencia"
+                        role="tab"
+                        aria-selected="true"
+                    >
+                        Frecuencia (Hz)
+                    </button>
+
+                    <button
+                        type="button"
+                        class="modo-btn"
+                        data-modo="datos"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Datos (bps)
+                    </button>
+
+                </div>
+
+
+                <!-- VALOR -->
+                <div class="campo">
+
+                    <label for="valor">
+                        Valor
+                    </label>
+
+                    <input
+                        type="number"
+                        id="valor"
+                        placeholder="Ingresa un valor"
+                    >
+
+                </div>
+
+
+                <!-- UNIDADES -->
+                <div class="unidades">
+
+                    <div class="campo">
+
+                        <label for="desde">
+                            Desde
+                        </label>
+
+                        <select id="desde"></select>
+
+                    </div>
+
+
+                    <div class="flecha-conversion">
+                        →
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="hasta">
+                            Hasta
+                        </label>
+
+                        <select id="hasta"></select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REGLA -->
+                <div class="regla-mini">
+
+                    <div>
+
+                        <strong id="reglaMiniTitulo">Regla de frecuencia</strong>
+
+                        <p>
+                            Subes = ÷ 1000
+                            <span>•</span>
+                            Bajas = × 1000
+                        </p>
+
+                        <small id="reglaMiniPequeno">Hz, kHz, MHz, GHz</small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTON -->
+                <button type="button" class="btn-calcular">
+
+                    <span>Calcular</span>
+
+                    <span class="flecha-boton">
+                        →
+                    </span>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- PANEL DERECHO -->
+            <section class="panel-procedimiento">
+
+                <div class="documento">
+                    <div class="math-output"></div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <section class="regla-completa">
+
+            <div class="regla-titulo">
+
+                <div>
+                    <h2>Ley de conversión (Base 10)</h2>
+
+                    <p>
+                        La regla fundamental para Hercios, bps y ancho de banda
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="regla-frases">
+
+                <div class="frase subir">
+
+                    <span class="frase-icono">
+                        ↑
+                    </span>
+
+                    <div>
+                        <strong>SUBES</strong>
+                        <span>DIVIDES ÷ 1000</span>
+                    </div>
+
+                </div>
+
+
+                <div class="separador">
+                    VS
+                </div>
+
+
+                <div class="frase bajar">
+
+                    <span class="frase-icono">
+                        ↓
+                    </span>
+
+                    <div>
+                        <strong>BAJAS</strong>
+                        <span>MULTIPLICAS × 1000</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESCALA · FRECUENCIA -->
+            <div class="escala" id="escalaFrecuencia">
+
+                <div class="unidad">
+                    <strong>Hz</strong>
+                    <small>Hercio</small>
+                </div>
+
+                <div class="conector">→</div>
+
+                <div class="unidad">
+                    <strong>kHz</strong>
+                    <small>×1000</small>
+                </div>
+
+                <div class="conector">→</div>
+
+                <div class="unidad">
+                    <strong>MHz</strong>
+                    <small>×1000</small>
+                </div>
+
+                <div class="conector">→</div>
+
+                <div class="unidad">
+                    <strong>GHz</strong>
+                    <small>×1000</small>
+                </div>
+
+                <div class="conector">→</div>
+
+                <div class="unidad">
+                    <strong>THz</strong>
+                    <small>×1000</small>
+                </div>
+
+            </div>
+
+
+            <!-- ESCALA · DATOS (bit-familia y Byte-familia, unidas por ×8/÷8) -->
+            <div class="escala-grupo oculto" id="escalaDatos">
+
+                <div class="escala-fila">
+
+                    <div class="unidad">
+                        <strong>bps</strong>
+                        <small>bit/s</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>kbps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>Mbps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>Gbps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>Tbps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                </div>
+
+                <div class="puente-familias">
+                    <span>×8</span>
+                    <small>bit ⇄ Byte, al mismo nivel</small>
+                    <span>÷8</span>
+                </div>
+
+                <div class="escala-fila">
+
+                    <div class="unidad">
+                        <strong>Bps</strong>
+                        <small>Byte/s</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>kBps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>MBps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>GBps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                    <div class="conector">→</div>
+
+                    <div class="unidad">
+                        <strong>TBps</strong>
+                        <small>×1000</small>
+                    </div>
+
+                </div>
+
+                <div class="escala-fila">
+                    <div class="unidad"><strong>TB</strong><small>÷1000 / ×1000</small></div>
+                    <div class="conector">↕</div>
+                    <div class="unidad"><strong>GB</strong><small>÷1000 / ×1000</small></div>
+                    <div class="conector">↕</div>
+                    <div class="unidad"><strong>MB</strong><small>÷1000 / ×1000</small></div>
+                    <div class="conector">↕</div>
+                    <div class="unidad"><strong>KB</strong><small>÷1000 / ×1024</small></div>
+                    <div class="conector">↕</div>
+                    <div class="unidad"><strong>B</strong><small>÷1024 / ×1024</small></div>
+                    <div class="conector">↕</div>
+                    <div class="unidad"><strong>bit</strong><small>base 2</small></div>
+                </div>
+
+            </div>
+
+            <div class="advertencia">
+
+                <p>
+                    <strong>Importante:</strong>
+                    en Frecuencia y Datos (bps) se usa
+                    <strong>1000</strong>. En la escala de almacenamiento se usa
+                    <strong>1000</strong> entre TB, GB, MB y KB;
+                    <strong>1024</strong> entre KB y B, y entre B y bit.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</body>
+</html>
