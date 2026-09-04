@@ -622,8 +622,7 @@ body {
 @media (max-width: 650px) {
 
     .hero {
-        min-height: 76vh;
-        padding: 70px 6% 78px;
+        padding: 90px 6% 60px;
     }
 
     .chips-hero {
@@ -633,37 +632,6 @@ body {
     .chip {
         min-width: 100px;
         padding: 12px 14px;
-    }
-
-    .seccion-modulos {
-        margin-top: -64px;
-    }
-
-    .encabezado-seccion {
-        margin-bottom: 26px;
-    }
-
-    .grid-modulos,
-    .franja-info {
-        gap: 16px;
-    }
-
-    .tarjeta-modulo,
-    .tarjeta-info {
-        padding: 22px;
-    }
-
-    .footer {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 26px 6%;
-    }
-
-    .marca-autor {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 18px;
-        white-space: nowrap;
     }
 }
 
@@ -705,18 +673,24 @@ body {
             <span class="marca-autor">JhonnyRJ Code</span>
         </section>
 
-        <section class="seccion-modulos">
+        <section class="seccion-modulos" aria-labelledby="modulos-titulo">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">Elige una herramienta</span>
+                <h2 id="modulos-titulo">Módulos de cálculo</h2>
+                <p>Selecciona el área que quieres estudiar o convertir.</p>
+            </div>
+
             <div class="grid-modulos">
-                <a class="tarjeta-modulo visible" href="HTML/Almacenamiento.html">
+                <a class="tarjeta-modulo visible" href="Almacenamiento.html">
                     <span class="numero-modulo">01</span>
-                    <span class="icono-modulo" aria-hidden="true"><img src="ICONS/set_desk_882.png" alt=""></span>
+                    <span class="icono-modulo" aria-hidden="true"><img src="../ICONS/set_desk_882.png" alt=""></span>
                     <h3>Almacenamiento</h3>
                     <p>Convierte unidades de almacenamiento digital y observa cada paso del procedimiento.</p>
                     <div class="tags-modulo"><span>bytes</span><span>KB</span><span>GB</span><span>TB</span></div>
                     <span class="abrir-modulo">Abrir calculadora <span aria-hidden="true">→</span></span>
                 </a>
 
-                <a class="tarjeta-modulo visible" href="HTML/Electricidad.html">
+                <a class="tarjeta-modulo visible" href="Electricidad.html">
                     <span class="numero-modulo">02</span>
                     <span class="icono-modulo" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#2563eb"/></svg></span>
                     <h3>Electricidad</h3>
@@ -725,9 +699,9 @@ body {
                     <span class="abrir-modulo">Abrir calculadora <span aria-hidden="true">→</span></span>
                 </a>
 
-                <a class="tarjeta-modulo visible" href="HTML/Frecuenciadatos.html">
+                <a class="tarjeta-modulo visible" href="Frecuenciadatos.html">
                     <span class="numero-modulo">03</span>
-                    <span class="icono-modulo" aria-hidden="true"><img src="ICONS/hz.gif" alt=""></span>
+                    <span class="icono-modulo" aria-hidden="true"><img src="../ICONS/hz.gif" alt=""></span>
                     <h3>Frecuencia y datos</h3>
                     <p>Trabaja con frecuencia, periodo y cantidad de datos mediante conversiones claras.</p>
                     <div class="tags-modulo"><span>Hz</span><span>kHz</span><span>periodo</span><span>datos</span></div>

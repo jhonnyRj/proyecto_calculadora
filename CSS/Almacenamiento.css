@@ -866,16 +866,42 @@ body {
 @media (max-width: 650px) {
 
     .header {
+        height: auto;
+        min-height: 72px;
+        gap: 12px;
         padding: 0 20px;
+        flex-wrap: wrap;
+        align-content: center;
     }
 
     .contenido,
     .regla-completa {
-        width: 94%;
+        width: calc(100% - 24px);
+        margin-top: 24px;
+    }
+
+    .panel-conversor,
+    .regla-completa {
+        padding: 20px;
+    }
+
+    .encabezado-panel {
+        margin-bottom: 22px;
     }
 
     .documento {
-        padding: 30px 20px;
+        padding: 20px 12px;
+    }
+
+    .math-output {
+        gap: 12px;
+        padding: 12px 8px;
+        overflow-x: auto;
+    }
+
+    .math-line {
+        min-width: 0;
+        padding: 12px 8px;
     }
 
     .unidades {
@@ -890,6 +916,7 @@ body {
     .regla-frases {
         flex-direction: column;
         gap: 15px;
+        margin: 22px 0;
     }
 
     .escala {
